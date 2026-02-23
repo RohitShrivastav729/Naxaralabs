@@ -30,7 +30,7 @@ function Contact() {
           <input
             type="hidden"
             name="_next"
-            value="http://localhost:5173/thank-you"
+            value="https://naxaralabs.com/thank-you"
           />
 
           {/* Full Name */}
@@ -52,23 +52,24 @@ function Contact() {
           />
 
           {/* Phone with Country Code */}
-          <div className="phone-group">
-            <select name="country_code" className="country-select">
-              <option value="+91">🇮🇳 India (+91)</option>
-              <option value="+1">🇺🇸 United States (+1)</option>
-              <option value="+44">🇬🇧 United Kingdom (+44)</option>
-              <option value="+61">🇦🇺 Australia (+61)</option>
-              <option value="+971">🇦🇪 UAE (+971)</option>
-              <option value="+65">🇸🇬 Singapore (+65)</option>
-            </select>
+          <div className="phone-field">
+            <label>Phone Number</label>
 
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Phone Number"
-              className="phone-input"
-              required
-            />
+            <div className="phone-row">
+              <select className="country-code">
+                <option value="+91">🇮🇳 +91 India</option>
+                <option value="+1">🇺🇸 +1 USA</option>
+                <option value="+44">🇬🇧 +44 UK</option>
+                <option value="+61">🇦🇺 +61 Australia</option>
+              </select>
+
+              <input
+                type="tel"
+                placeholder="Enter phone number"
+                className="phone-input"
+                required
+              />
+            </div>
           </div>
 
           {/* Company Name */}
