@@ -56,7 +56,7 @@ function Contact() {
             <label>Phone Number</label>
 
             <div className="phone-row">
-              <select className="country-code">
+              <select name="country_code" className="country-code">
                 <option value="+91">🇮🇳 +91 India</option>
                 <option value="+1">🇺🇸 +1 USA</option>
                 <option value="+44">🇬🇧 +44 UK</option>
@@ -65,6 +65,7 @@ function Contact() {
 
               <input
                 type="tel"
+                name="phone"
                 placeholder="Enter phone number"
                 className="phone-input"
                 required
