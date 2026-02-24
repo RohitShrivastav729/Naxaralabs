@@ -16,7 +16,7 @@ function Contact() {
         </p>
 
         <form
-          action="https://formsubmit.co/rohitshrivastav@naxaralabs.com"
+          action="https://formsubmit.co/rohitshrivastav628@gmail.com"
           method="POST"
           onSubmit={() => setLoading(true)}
           style={{
