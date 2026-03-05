@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ThankYou from "./pages/ThankYou";
+import WhatsappButton from "./components/sections/WhatsappButton"
 
 function App() {
   return(
@@ -22,6 +23,7 @@ function App() {
         </div>
 
         <Footer />
+        <WhatsappButton />
       </div>
     </Router>
   )
