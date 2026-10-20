@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import logoIcon from "../../assets/NaxaraLabslogo.png";
 import "../../styles/layout/navbar.css";
 import { useState } from "react";
 
@@ -10,7 +9,7 @@ function Navbar() {
       <div className="container nav-inner">
         {/* LOGO + TEXT */}
         <Link to="/" className="brand">
-          <img src={logoIcon} alt="NaxaraLabs" className="brand-icon" />
+          <img src="/naxara-labs-logo.webp" alt="Naxara Labs" className="brand-icon" width="60" height="60" />
           <span className="brand-text">
             <span className="brand-main">Naxara</span>
             <span className="brand-accent">Labs</span>
@@ -19,12 +18,19 @@ function Navbar() {
 
         {/* NAV LINKS */}
         {/* MOBILE MENU BUTTON */}
-        <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+        <button
+          className="menu-toggle"
+          type="button"
+          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={menuOpen}
+          aria-controls="primary-navigation"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
           ☰
-        </div>
+        </button>
 
         {/* NAV LINKS */}
-        <nav className={`nav-links ${menuOpen ? "active" : ""}`}>
+        <nav id="primary-navigation" className={`nav-links ${menuOpen ? "active" : ""}`}>
           <Link to="/" onClick={() => setMenuOpen(false)}>
             Home
           </Link>

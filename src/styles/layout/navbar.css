@@ -94,6 +94,9 @@
   font-size:28px;
   color:white;
   cursor:pointer;
+  padding:0;
+  border:0;
+  background:transparent;
 }
 
 /* mobile */

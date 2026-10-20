@@ -54,6 +54,9 @@
 }
 
 .cta-primary{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
   background:linear-gradient(90deg,#00bfff,#1d4ed8);
   border:none;
   padding:16px 38px;
@@ -61,6 +64,7 @@
   color:white;
   font-weight:600;
   font-size:16px;
+  text-decoration:none;
   cursor:pointer;
   box-shadow:0 0 30px rgba(0,191,255,0.35);
 }

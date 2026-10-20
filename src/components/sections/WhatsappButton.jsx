@@ -13,6 +13,7 @@ function WhatsappButton() {
       href={whatsappLink}
       target="_blank"
       rel="noopener noreferrer"
+      aria-label="Chat with Naxara Labs on WhatsApp"
       className="whatsapp-float"
     >
       💬

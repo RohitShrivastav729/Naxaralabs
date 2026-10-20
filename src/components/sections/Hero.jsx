@@ -1,28 +1,25 @@
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../../styles/sections/hero.css";
 
 function Hero(){
-  const navigate = useNavigate();
-
   return(
     <section className="hero">
       <div className="container hero-inner">
         <h1>
-          AI-Driven Digital Solutions <br/> for Modern Businesses
+          Websites, web apps and mobile apps for your business
         </h1>
 
         <p>
-          NaxaraLabs engineers intelligent web and mobile applications powered 
-          by modern AI technologies to help businesses scale faster and operate smarter.
+          Naxara Labs develops business websites, full-stack web applications, Android and iOS apps, and custom workflow automation for small businesses, startups, and entrepreneurs.
         </p>
 
         <div className="hero-buttons">
-          <button 
+          <Link
             className="primary-btn"
-            onClick={() => navigate("/contact")}
+            to="/contact"
           >
-            Book Consultation
-          </button>
+            Discuss Your Project
+          </Link>
         </div>
       </div>
     </section>

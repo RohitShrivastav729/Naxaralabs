@@ -1,4 +1,3 @@
-import logoIcon from "../../assets/NaxaraLabslogo.png";
 import "../../styles/layout/footer.css";
 
 function Footer(){
@@ -7,7 +6,7 @@ function Footer(){
 
       <div className="container footer-center">
 
-        <img src={logoIcon} alt="NaxaraLabs" className="footer-logo"/>
+        <img src="/naxara-labs-logo.webp" alt="Naxara Labs" className="footer-logo" width="70" height="70" />
 
         <h2 className="footer-name">
           <span className="footer-main">Naxara</span>

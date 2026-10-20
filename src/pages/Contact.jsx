@@ -38,6 +38,7 @@ function Contact() {
             type="text"
             name="full_name"
             placeholder="Full Name"
+            aria-label="Full name"
             className="contact-input"
             required
           />
@@ -47,16 +48,17 @@ function Contact() {
             type="email"
             name="email"
             placeholder="Your Email"
+            aria-label="Email address"
             className="contact-input"
             required
           />
 
           {/* Phone with Country Code */}
           <div className="phone-field">
-            <label>Phone Number</label>
+            <label htmlFor="phone-number">Phone Number</label>
 
             <div className="phone-row">
-              <select name="country_code" className="country-code">
+                <select name="country_code" className="country-code" aria-label="Country calling code">
                 <option value="+91">🇮🇳 +91 India</option>
                 <option value="+1">🇺🇸 +1 USA</option>
                 <option value="+44">🇬🇧 +44 UK</option>
@@ -65,8 +67,10 @@ function Contact() {
 
               <input
                 type="tel"
+                id="phone-number"
                 name="phone"
                 placeholder="Enter phone number"
+                aria-label="Phone number"
                 className="phone-input"
                 required
               />
@@ -78,16 +82,17 @@ function Contact() {
             type="text"
             name="company"
             placeholder="Company Name (Optional)"
+            aria-label="Company name (optional)"
             className="contact-input"
           />
 
           {/* Service Required */}
-          <select name="service_required" className="contact-input" required>
+          <select name="service_required" className="contact-input" aria-label="Service required" required>
             <option value="">Select Service Required</option>
             <option>Website Development</option>
             <option>Web Application Development</option>
             <option>Mobile App Development</option>
-            <option>AI Integration / Automation</option>
+            <option>Business Automation &amp; Integrations</option>
             <option>Custom Business Software</option>
             <option>Other</option>
           </select>
@@ -96,6 +101,7 @@ function Contact() {
           <textarea
             name="project_description"
             placeholder="Briefly describe your project requirements..."
+            aria-label="Project description"
             className="contact-input"
             rows="5"
             required

@@ -1,9 +1,7 @@
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../../styles/sections/cta.css";
 
 function CTA(){
-  const navigate = useNavigate();
-
   return(
     <section className="cta">
       <div className="container">
@@ -12,17 +10,16 @@ function CTA(){
           <h2>Let’s Build Something Powerful Together</h2>
 
           <p>
-            Partner with NaxaraLabs to design and develop intelligent digital 
-            solutions that drive real business growth.
+            Tell us what you are building or where your current process needs help. We can discuss the right software or automation approach for your project.
           </p>
 
           <div className="cta-buttons">
-            <button 
+            <Link
               className="cta-primary"
-              onClick={() => navigate("/contact")}
+              to="/contact"
             >
-              Book Consultation
-            </button>
+              Contact Naxara Labs
+            </Link>
           </div>
         </div>
 
