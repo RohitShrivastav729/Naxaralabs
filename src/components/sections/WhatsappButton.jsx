@@ -7,13 +7,16 @@ function WhatsappButton() {
   const [footerVisible, setFooterVisible] = useState(false);
 
   useEffect(() => {
-    const footer = document.querySelector(".footer");
-    if (!footer) return undefined;
+    const observedSections = [
+      document.querySelector(".selected-work"),
+      document.querySelector(".footer"),
+    ].filter(Boolean);
+    if (!observedSections.length) return undefined;
 
-    const observer = new IntersectionObserver(([entry]) => {
-      setFooterVisible(entry.isIntersecting);
+    const observer = new IntersectionObserver((entries) => {
+      setFooterVisible(entries.some((entry) => entry.isIntersecting));
     });
-    observer.observe(footer);
+    observedSections.forEach((section) => observer.observe(section));
 
     return () => observer.disconnect();
   }, []);

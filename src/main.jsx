@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import App from './App.jsx'
 import "./styles/global.css"
 import "./styles/redesign.css"
+import "./styles/selected-work.css"
 
 const app = (
   <StrictMode>
