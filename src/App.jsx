@@ -11,7 +11,7 @@ function App() {
   return(
     <Router>
       <div className="app-wrapper">
-        <Navbar />
+        <Navbar /> 
 
         <div className="page-content">
           <Routes>
