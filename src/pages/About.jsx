@@ -1,40 +1,33 @@
+import { Link } from "react-router-dom";
+
 function About(){
   return(
-    <section style={{padding:"140px 0"}}>
-      <div className="container" style={{maxWidth:"900px"}}>
-
-        <h1 style={{fontSize:"48px", marginBottom:"20px"}}>
-          Building Intelligent Digital Products for Modern Businesses
-        </h1>
-
-        <p style={{fontSize:"18px", lineHeight:"1.7", color:"#9aa4b2"}}>
-          NaxaraLabs is a modern AI-driven software development company focused 
-          on building scalable, secure, and high-performance digital solutions 
-          for startups and growing businesses.
-        </p>
-
-        <div style={{height:"40px"}}></div>
-
-        <p style={{fontSize:"18px", lineHeight:"1.7", color:"#9aa4b2"}}>
-          Our mission is to help businesses leverage technology and artificial 
-          intelligence to improve efficiency, automate processes, and scale 
-          confidently in a rapidly evolving digital world.
-        </p>
-
-        <div style={{height:"60px"}}></div>
-
-        <h2 style={{fontSize:"28px", marginBottom:"16px"}}>
-          Our Approach
-        </h2>
-
-        <p style={{fontSize:"18px", lineHeight:"1.7", color:"#9aa4b2"}}>
-          We combine strong engineering practices with modern design and AI 
-          integration to deliver solutions that are not only visually premium 
-          but also technically scalable and reliable for long-term growth.
-        </p>
-
-      </div>
-    </section>
+    <main className="about-page">
+      <section className="about-hero">
+        <div className="container about-hero-layout">
+          <div>
+            <p className="eyebrow">About Naxara Labs</p>
+            <h1>Technology should make work feel <span>more possible.</span></h1>
+          </div>
+          <p className="about-intro">
+            Naxara Labs builds digital products for startups and growing businesses, from focused websites to full-stack applications and connected workflows.
+          </p>
+        </div>
+      </section>
+      <section className="about-content">
+        <div className="container about-content-layout">
+          <div className="about-marker"><span>N</span><small>Ideas, made useful.</small></div>
+          <div className="about-copy">
+            <p className="eyebrow">Our approach</p>
+            <h2>Start with the business. Then shape the technology.</h2>
+            <p>Naxara Labs is a software development company focused on building scalable, secure, and high-performance digital solutions for startups and growing businesses.</p>
+            <p>We help businesses use technology to improve efficiency, automate processes, and build with more confidence. That work begins by understanding the goal, then choosing an appropriate design and engineering approach.</p>
+            <p>From websites and mobile applications to custom software and automation, we combine modern design with strong engineering practices to support long-term use and change.</p>
+            <Link className="button button-primary" to="/contact">Discuss your project <span aria-hidden="true">↗</span></Link>
+          </div>
+        </div>
+      </section>
+    </main>
   )
 }
 

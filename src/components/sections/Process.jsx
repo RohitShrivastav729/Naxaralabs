@@ -1,66 +1,28 @@
 
-import "../../styles/sections/process.css";
-
 function Process(){
+  const steps = [
+    ["01", "Understand", "We listen to your goals, requirements, and constraints."],
+    ["02", "Plan", "We shape the scope and choose an appropriate technical direction."],
+    ["03", "Build", "Design and engineering come together in an iterative process."],
+    ["04", "Test & deliver", "We review the details and prepare the product for launch."],
+  ];
+
   return(
-    <section className="process">
+    <section className="process" aria-labelledby="process-title">
       <div className="container">
-
-        <div className="process-header">
-          <h2>Our Development Process</h2>
-          <p>
-            A structured and transparent workflow that ensures high-quality,
-            scalable, and business-focused digital solutions.
-          </p>
+        <div className="process-heading section-heading">
+          <p className="eyebrow">A clear path forward</p>
+          <h2 id="process-title">From first conversation to launch.</h2>
+          <p>A straightforward process keeps the work connected to your goals at every step.</p>
         </div>
-
         <div className="process-steps">
-
-          <div className="process-card">
-            <div className="step-number">01</div>
-            <h3>Discovery & Strategy</h3>
-            <p>
-              We understand your business, goals, and requirements to create
-              a clear roadmap for development.
-            </p>
-          </div>
-
-          <div className="process-card">
-            <div className="step-number">02</div>
-            <h3>Planning & Architecture</h3>
-            <p>
-              We design scalable system architecture and technical strategy
-              for long-term performance.
-            </p>
-          </div>
-
-          <div className="process-card">
-            <div className="step-number">03</div>
-            <h3>Design & Development</h3>
-            <p>
-              Our team builds modern, secure, and high-performance applications
-              using the latest technologies.
-            </p>
-          </div>
-
-          <div className="process-card">
-            <div className="step-number">04</div>
-            <h3>Testing & Optimization</h3>
-            <p>
-              Every product is tested thoroughly for performance, security,
-              and seamless user experience.
-            </p>
-          </div>
-
-          <div className="process-card">
-            <div className="step-number">05</div>
-            <h3>Launch & Support</h3>
-            <p>
-              We deploy and provide continuous support to ensure smooth
-              operations and future scalability.
-            </p>
-          </div>
-
+          {steps.map(([number, title, description]) => (
+            <article className="process-step" key={number}>
+              <span className="step-number">{number}</span>
+              <h3>{title}</h3>
+              <p>{description}</p>
+            </article>
+          ))}
         </div>
 
       </div>

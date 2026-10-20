@@ -1,26 +1,18 @@
 import { Link } from "react-router-dom";
-import "../../styles/sections/cta.css";
 
 function CTA(){
   return(
-    <section className="cta">
+    <section className="cta" aria-labelledby="cta-title">
       <div className="container">
-
-        <div className="cta-box">
-          <h2>Let’s Build Something Powerful Together</h2>
-
-          <p>
-            Tell us what you are building or where your current process needs help. We can discuss the right software or automation approach for your project.
-          </p>
-
-          <div className="cta-buttons">
-            <Link
-              className="cta-primary"
-              to="/contact"
-            >
-              Contact Naxara Labs
-            </Link>
+        <div className="cta-panel">
+          <div>
+            <p className="eyebrow">Have a project in mind?</p>
+            <h2 id="cta-title">Let’s make the next step clear.</h2>
+            <p>Share what you’re working on. We’ll start with a conversation about what would help.</p>
           </div>
+          <Link className="button button-primary cta-button" to="/contact">
+            Start a project conversation <span aria-hidden="true">↗</span>
+          </Link>
         </div>
 
       </div>

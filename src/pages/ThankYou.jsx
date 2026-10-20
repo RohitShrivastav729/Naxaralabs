@@ -1,32 +1,17 @@
 
+import { Link } from "react-router-dom";
+
 function ThankYou(){
   return(
-    <section style={{padding:"160px 0", textAlign:"center"}}>
-      <div className="container" style={{maxWidth:"700px"}}>
-
-        <h1 style={{fontSize:"48px", marginBottom:"20px"}}>
-          Thank You 👋
-        </h1>
-
-        <p style={{fontSize:"18px", color:"#9aa4b2", marginBottom:"40px"}}>
-          Your consultation request has been received.  
-          Our team will get back to you within 24 hours.
-        </p>
-
-        <a href="/" style={{
-          display:"inline-block",
-          padding:"14px 30px",
-          background:"#00bfff",
-          borderRadius:"10px",
-          color:"black",
-          fontWeight:"600",
-          textDecoration:"none"
-        }}>
-          Back to Home
-        </a>
-
-      </div>
-    </section>
+    <main className="confirmation-page">
+      <section className="confirmation-panel">
+        <span className="confirmation-mark" aria-hidden="true">✓</span>
+        <p className="eyebrow">Enquiry received</p>
+        <h1>Thank you for reaching out.</h1>
+        <p>Your consultation request has been received. Our team will get back to you within 24 hours.</p>
+        <Link className="button button-primary" to="/">Back to the homepage <span aria-hidden="true">↗</span></Link>
+      </section>
+    </main>
   )
 }
 
